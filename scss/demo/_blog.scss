@@ -1,0 +1,55 @@
+
+/* ----------------------------------------------------------------
+
+	blog.scss
+
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	Blog
+-----------------------------------------------------------------*/
+.post {
+	position: relative;
+	margin-bottom: 1.875rem;
+
+	@include transition(all 0.5s ease-in-out);
+
+	&:hover {
+		.post-content {
+			width: 100%;
+			justify-content: center;
+			text-align: center;
+		}
+	}
+}
+
+.post-thumbnail {
+	display: block;
+	position: relative;
+	width: 100%;
+
+	img {
+		width: 100%;
+		border-radius: 0.75rem;
+	}
+}
+
+.post-content {
+	padding: 1rem 2rem;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	.entry-title {
+		font-size: 1.5rem;
+	}
+
+	.entry-meta {
+		font-size: 0.875rem;
+		color: #afafaf;
+	}
+}

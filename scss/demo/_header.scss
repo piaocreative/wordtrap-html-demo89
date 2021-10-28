@@ -1,0 +1,297 @@
+
+/* ----------------------------------------------------------------
+
+	header.scss
+
+-----------------------------------------------------------------*/
+
+
+/* ----------------------------------------------------------------
+	Header
+-----------------------------------------------------------------*/
+
+
+/* ----------------------------------------------------------------
+	Add here styles for header. Thanks!
+-----------------------------------------------------------------*/
+
+
+#header {
+	position: relative;	
+
+	// Transparent header
+	&.transparent-header {
+		background-color: $light;
+		z-index: 199;
+
+		@include media-breakpoint-up(lg) {
+			background-color: transparent;
+
+			& + #content,
+			& + #error-404 {
+				position: relative;
+				top: -$header-height;
+				margin-bottom: -$header-height;
+			}
+		}			
+	}
+}
+
+.navbar-brand {
+	img {
+		max-width: 7rem;
+	}
+}
+
+
+/* ----------------------------------------------------------------
+	Primary Menu
+-----------------------------------------------------------------*/
+
+#primary-menu {
+	@include media-breakpoint-up(lg) {
+		margin-left: 2rem;
+	}
+
+	.nav-link {
+		color: $primary-menu-font-color;
+		font-family: $primary-menu-font;
+		font-size: $primary-menu-font-size;
+		font-weight: $primary-menu-font-weight;		
+		letter-spacing: $primary-menu-font-spacing;
+		text-transform: $primary-menu-font-tt;
+
+		@include media-breakpoint-down(lg) {
+			color: $dark;
+		}
+	}
+}
+
+
+/* ----------------------------------------------------------------
+	Mega Menu
+-----------------------------------------------------------------*/
+
+// Please ignore mega menu now 
+
+
+/* ----------------------------------------------------------------
+	Top Buttons
+-----------------------------------------------------------------*/
+
+
+#top-btns {
+	z-index: 1;
+
+	.nav-link {
+		color: #616161;	
+		line-height: 1;
+		z-index: 1;
+
+		[data-cart-items] {
+			position: relative;
+			display: inline-block;
+
+			&::before {
+				content: attr(data-cart-items);
+				position: absolute;
+				top: -.5rem;
+				right: -.75rem;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 19px;
+				height: 19px;
+				font-size: 11px;
+				font-weight: 500;
+				border-radius: 50%;
+				border: 1px solid #fff;
+				background-color: #000;
+				color: #fff;
+			}
+		}	
+	}
+
+	@include media-breakpoint-up(lg) {
+		position: absolute;
+		height: 100%;
+		display: flex;
+		top: 0;
+		right: 0;
+		padding: 0 11rem;
+	}
+}
+
+
+/* ----------------------------------------------------------------
+	Top Links
+-----------------------------------------------------------------*/
+
+#top-links {
+	a.nav-link {
+		color: $white;
+		font-size: 0.75rem;
+		display: block;
+		text-transform: uppercase;
+
+		@include media-breakpoint-down(lg) {
+			color: $dark;
+		}
+	}
+
+	.dropdown-toggle {
+		&::after {
+			margin-left: .75em;
+		}
+	}
+
+	.dropdown-menu {
+		background: $white;
+		border: 0;
+		top: $topbar-line-height;
+		left: 0;
+		width: 100%;		
+		margin: 0;
+		border-top: 3px solid $theme-color;
+
+		@include border-radius(0);
+
+		@include box-shadow(0 0 5px -1px rgba($black, 0.2));
+		
+		@include media-breakpoint-up(lg) {
+			width: 8.75rem;
+		}
+
+		a.dropdown-item {
+			color: $heading-color;
+			height: 2.25rem;
+			line-height: 2.25rem;
+			font-size: 0.75rem;				
+			padding: 0 0.75rem;
+
+			&:hover {
+				color: $theme-color;
+			}
+		}
+
+		img {
+			display: inline-block;
+			position: relative;
+			top: -1px;
+			width: 1rem;
+			height: 1rem;
+			margin-right: 0.25rem;
+		}
+	}
+
+	@include media-breakpoint-up(lg) {
+		margin-left: 3rem;
+	}
+}
+
+/* ----------------------------------------------------------------
+	Top Infos
+-----------------------------------------------------------------*/
+#top-infos {
+	ul {
+		display: flex;
+		gap: 6rem;
+
+		@include media-breakpoint-down(lg) {
+			display: block;
+			gap: 0;
+			text-align: center;
+		}
+	}
+
+	li {
+		a {
+			color: #2a2a2a;
+			white-space: nowrap;
+
+			i {
+				color: $theme-color;
+				margin-right: 0.35rem;
+			}
+
+			&:hover {
+				font-weight: 500;
+				color: $theme-color;
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+
+/* ----------------------------------------------------------------
+	Top Social
+-----------------------------------------------------------------*/
+#top-social {
+	background-color: $white;
+
+	ul {
+		li {
+			margin-bottom: 5rem;
+
+			a {
+				display: block;
+				font-family: 'Roboto', sans-serif;
+				font-weight: 300;
+				color: $dark;
+				transform: rotate(270deg);
+				white-space: nowrap;
+				font-size: 0.875rem;
+				text-transform: uppercase;
+
+				&:hover {
+					color: #c2ccdb;
+				}
+			}
+		}
+
+		@include media-breakpoint-down(lg) {
+			display: flex;
+			justify-content: center;
+			gap: 1.5rem;
+
+			li {
+				margin-bottom: 1rem;
+
+				a {
+					transform: rotate(0);
+				}
+			}
+		}
+	}
+}
+
+
+/* ----------------------------------------------------------------
+	Top product
+-----------------------------------------------------------------*/
+
+
+/* ----------------------------------------------------------------
+	Top Search
+-----------------------------------------------------------------*/
+
+
+
+
+/* ----------------------------------------------------------------
+	Top Cart
+-----------------------------------------------------------------*/
+
+
+
+
+/* ----------------------------------------------------------------
+	Top Account
+-----------------------------------------------------------------*/
+
+
+
+
+
+

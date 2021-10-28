@@ -1,0 +1,38 @@
+/*-----------------------------------------------------------------------------------
+
+	Shortcodes: timeline.scss
+
+-----------------------------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	Timeline Styles
+-----------------------------------------------------------------*/
+
+.event {
+	margin-bottom: 2.875rem;
+
+	.event-date {
+		font-size: 8.5625rem;
+		color: #eee2d9;
+		line-height: 1;
+		font-weight: 300;
+
+		@include media-breakpoint-up(lg ){
+			&.start {
+				position: relative;
+				left: -5rem;
+				z-index: -1;
+			}
+	
+			&.end {
+				position: relative;
+				right: -5rem;
+				z-index: -1;
+			}
+		}
+	}
+
+	p {
+		font-size: 1.0625rem;
+	}
+}

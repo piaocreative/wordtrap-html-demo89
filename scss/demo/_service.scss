@@ -1,0 +1,109 @@
+
+/* ----------------------------------------------------------------
+
+	Service.scss
+
+-----------------------------------------------------------------*/
+
+
+/* ----------------------------------------------------------------
+	Service
+-----------------------------------------------------------------*/
+
+
+/* ----------------------------------------------------------------
+	Add here styles for service pages. Thanks!
+-----------------------------------------------------------------*/
+
+.sevice-list {
+    ul {
+        li {
+            margin-bottom: 2rem;
+
+            a {
+                font-family: Gilroy-Medium;
+                text-decoration: none;
+                color: $dark;
+                font-size: 1.5rem;
+
+                &:before {
+                    position: relative;
+                    right: 1rem;
+                    display: inline-block;
+                    content: "";
+                    width: 0.875rem;
+                    height: 1px;
+                    background-color: $dark;
+                    vertical-align: middle;
+                }
+
+                &:hover {
+                    color: $theme-color;
+                }
+            }
+        }
+    }
+}
+
+.service {
+    position: relative;
+    padding: 3.5rem 4.875rem 6rem;
+
+    background-color: #fdf9ef;
+
+    .service-title {
+        font-family: Gilroy-semibold;
+        font-size: 1.125rem;
+    }
+
+    .service-price {
+        font-family: Gilroy-semibold;
+        font-size: 1.5rem;
+
+        del {
+            font-family: Gilroy-Medium;
+            font-size: 1.25rem;
+            margin-right: 1.5rem;
+        }
+
+        span {
+            font-family: $body-font;
+            font-size: 1.125rem;
+        }
+    }
+
+    .service-btn {
+        a {
+            font-family: Gilroy-semibold;
+            background-image: linear-gradient(180deg, #fdd1ac, transparent);
+        }
+    }
+}
+
+
+.service-image {
+    position: absolute;
+    right: 0;
+    top: 8rem;
+    width: 100%;
+
+    img {
+        width: 100%;
+    }
+
+    @include media-breakpoint-down(lg) {
+        position: relative;
+        top: 0;
+    }
+}
+
+.service-more {
+    position: absolute;
+    right: 0;
+    bottom: 5rem;
+
+    @include media-breakpoint-down(lg) {
+        position: relative;
+        bottom: 0;
+    }
+}

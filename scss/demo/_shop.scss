@@ -1,0 +1,173 @@
+
+/* ----------------------------------------------------------------
+
+	shop.scss
+
+-----------------------------------------------------------------*/
+
+
+/* ----------------------------------------------------------------
+	Shop
+-----------------------------------------------------------------*/
+
+
+/* ----------------------------------------------------------------
+	Add here styles for shop pages. Thanks!
+-----------------------------------------------------------------*/
+
+/* Product
+-----------------------------------------------------------------*/
+.product {
+	position: relative;
+	margin-bottom: 1.875rem;
+
+	.product-image {
+		position: relative;
+
+		img {
+			width: 100%;
+			height: auto;
+			border-radius: 0.75rem;
+		}
+	}
+
+	.product-details {
+		position: absolute;
+		top: 0;
+		left: 0;
+		padding: 1.5rem;
+		z-index: 1;
+	}
+
+	.product-price {
+		font-family: $heading-font;
+		font-weight: 500;
+		font-size: 1.5rem;
+		color: #403e3e;
+	
+		del {
+			font-weight: 400;
+			font-size: 0.875rem;
+			color: #9e9e9e;
+			margin-left: 0.25rem;
+		}
+	}
+
+	.product-title {
+		font-weight: 400;
+		font-size: 0.875rem;
+		color: #aaa9a9;
+	}
+
+	.product-rating {
+		line-height: 1;
+		font-size: 0.875rem;
+		color: #b3b2b0;
+
+		i {
+			color: #ff893f;
+			font-size: 0.65rem;
+
+			&.empty {
+				color: rgba(#ff893f, 0.5);
+			}
+		}
+	}
+
+	.product-btns {
+		position: absolute;
+		top: 0;
+		right: 0;
+
+		@include transition(all 0.5s ease-in-out);
+	}
+
+	.add-to-cart, .add-to-wishlist {
+		padding: 0.875rem;
+		font-size: 0.875rem;
+		display: inline-block;
+	}	
+
+	.add-to-cart {
+		background-color: #00000014;
+		color: $white;
+		border-top-right-radius: 0.75rem;
+		border-bottom-left-radius: 0.75rem;
+	}
+
+	.add-to-wishlist {
+		position: absolute;
+		top: 42.5%;
+		left: 42.5%;
+		border-radius: 0.75rem;
+		color: #616161;
+		background-color: $white;
+		opacity: 0;
+
+		@include transition(all 0.5s ease-in-out);
+	}
+
+	&:hover {
+		.add-to-wishlist {
+			opacity: 1;
+		}
+	}
+}
+
+.ontop, .onhit, .onbest, .onsale, .onnew {
+	font-family: $heading-font;
+	font-size: 0.875rem;
+	font-weight: 700;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	width: 2.5rem;
+	height: 2.5rem;
+	line-height: 1;
+	color: $white; 	
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	border-top-right-radius: 0.75rem;
+	border-bottom-left-radius: 0.75rem;
+	background-color: #3f3d3d;
+}
+
+.ads {
+    position: relative;
+    display: block;
+	margin-bottom: 1.5rem;
+
+    .ads-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+        .ads-bg-img {
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+			border-radius: 0.75rem;;
+        }
+    }
+
+    .ads-body {
+        position: relative;
+        z-index: 1;
+    }
+
+	&.ads1 {
+		.ads-body {
+			padding: 2.5rem;
+			padding-top: 15.5rem;
+		}
+	}
+}

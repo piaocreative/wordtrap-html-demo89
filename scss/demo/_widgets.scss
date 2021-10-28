@@ -1,0 +1,125 @@
+
+/* ----------------------------------------------------------------
+
+	widgets.scss
+
+-----------------------------------------------------------------*/
+
+
+/* ----------------------------------------------------------------
+	Widgets
+-----------------------------------------------------------------*/
+
+
+/* ----------------------------------------------------------------
+	Add here styles for widgets. Thanks!
+-----------------------------------------------------------------*/
+
+
+.widget {
+	margin-bottom: 1.875rem;
+
+	.widget-title {
+		font-size: 0.875rem;
+		font-family: $body-font;
+		font-weight: 300;
+		color: $white;
+		text-transform: uppercase;
+		margin-bottom: 0.875rem;
+	}
+
+	// Widget - Social
+	&.widget-social {
+		.social-icons {
+			li {
+				padding: 0 0.25rem;
+
+				&:last-child {
+					padding-right: 0;
+				}
+		
+				a {
+					background-color: #2d2d2d;					
+					color: #717171;
+					display: inline-block;
+					line-height: 1.8125rem;
+					width: 2.8125rem;
+					height: 2.8125rem;
+					border-radius: 0.5rem;
+					font-size: 1.25rem;
+					padding: 0.5rem;		
+					vertical-align: middle;
+					text-align: center;
+					transition: all 0.3s ease-in-out;
+		
+					&:hover {
+						background-color: $theme-color;
+						color: $white;
+					}
+		
+					i {
+						vertical-align: top;
+						line-height: 1.8125rem;
+					}
+				}
+			}
+		}
+	}
+	// Widget - Links
+	&.widget-links {
+		ul {
+			li {
+				a {
+					color: #7c7c7c;
+					font-weight: 300;
+					white-space: nowrap;
+				}
+			}
+		}
+	}
+
+	&.widget-custom-html {
+		ul {
+			li {
+				a {
+					display: block;
+					color: $white;
+					font-size: 0.875rem;
+					font-weight: 300;
+					margin-bottom: 0.5rem;
+				}
+
+				i {
+					font-size: 1.25rem;
+					margin-right: 0.875rem;
+				}
+			}
+		}
+	}
+
+	// Widget - Payments
+	&.widget-payment {
+		.payments {
+			display: flex;
+
+			.payment-icon {
+				text-align: center;
+				margin-left: 0.4rem;
+				width: 5.5rem;
+				padding: 0.3rem 0;
+				border-radius: 0.5rem;
+				background-color: #2d2d2d;
+				
+				img {
+					width: 3.5rem;
+				}
+			}
+		}
+	}
+
+	&.widget-subscribe {
+		.input-group {
+			background-color: #2e2e2e;
+		}
+	}
+}
